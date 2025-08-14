@@ -1,15 +1,15 @@
-# 🧮 Simple Calculator in C
+# Simple Calculator in C
 
 A simple calculator program written in C that allows the user to perform basic arithmetic operations repeatedly until they choose to exit.
 
-## 📌 Features
+##  Features
 - Addition (`+`)
 - Subtraction (`-`)
 - Multiplication (`*`)
 - Division (`/`) with **division-by-zero check**
 - Option to perform multiple calculations in a single run
 
-## 🛠 Program Flow
+##  Program Flow
 1. The user enters **first number**
 2. The user selects an **operation** (`+`, `-`, `*`, `/`)
 3. The user enters **second number**
@@ -18,7 +18,7 @@ A simple calculator program written in C that allows the user to perform basic a
    - Press `y` or `Y` to continue  
    - Press `n` or any other key to exit  
 
-## 🚀 How to Run
+##  How to Run
 1. Clone the repository:
    ```bash
    git clone https://github.com/rajamannn/Calculator-.git
