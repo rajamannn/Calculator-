@@ -1,49 +1,62 @@
-//program to print Simple Calculator using switch case statement
+// Simple Calculator Using C
+#include <stdio.h>
 
-#include<stdio.h>
+// Main function where execution starts
+int main() {
+    float num1, num2, results; 
+    char operations;           
+    char choice;              
 
-int main()
-{
+    // Do-while loop ensures the calculator runs at least once
+    do {
+        printf("\n===== Simple Calculator =====\n");
 
- float num1,num2,results;
-char operations;
+        // Input of the program as here given /
+        printf("Enter the number 1: ");
+        scanf("%f", &num1);
 
-  printf("*Simple Calculators*\n\n");
- printf("Enter the number:\n");
-scanf("%f",&num1);
+      
+        printf("Enter the operator (+,-,*,/): ");
+        scanf(" %c", &operations);
 
-printf("\nEnter operators(+,-,*,/)\n\n");
-scanf("%c",&operations);
+      
+        printf("Enter the number 2: ");
+        scanf("%f", &num2);
 
-printf("\nEnter the number 2:\n");
-scanf("%f",&num2);
+        // For the calculation based on operator
+        switch (operations) {
+            case '+':
+                results = num1 + num2;
+                break;
+            case '-':
+                results = num1 - num2;
+                break;
+            case '*':
+                results = num1 * num2;
+                break;
+            case '/':
+                if (num2 != 0)
+                    results = num1 / num2;
+                else {
+                    printf("Error: Division by zero!\n");
+                    results = 0;
+                }
+                break;
+            default:
+                printf("Invalid Operation\n");
+                results = 0;
+        }
 
-switch (operations)
-{
-    case'+':
-    results= num1 + num2;
-    break;
-    case'-':
-    results= num1 - num2;
-    break;
-    case'*':
-    results= num1 * num2;
-    break;
-    case'/':
-    results= num1 / num2;
-    break;
+        // Display result after the caculation 
+        printf("Result = %.2f\n", results);
 
- default:
-   printf("Invalid operation\n");
-     return 1;
+        // Asking for continution 
+        printf("Do you want to perform another calculation? (y/n): ");
+        scanf(" %c", &choice); 
+
+    } while (choice == 'y' || choice == 'Y'); // Choice submission 
+
+    
+    printf("Calculator closed.\n");
+    return 0;
 }
-   printf("Result:%2f\n",results);
-
-return 0;
-}
-for(i)
-
-
-
-
-
